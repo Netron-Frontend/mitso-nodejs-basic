@@ -1,5 +1,10 @@
+import fs from 'fs';
+
 const copy = async () => {
-    // Write your code here 
+    fs.cp(`./files`, `./files_copy`, (err) => {
+        if(err) throw err;
+        console.log('FS operation failed');
+    })
 };
 
 await copy();

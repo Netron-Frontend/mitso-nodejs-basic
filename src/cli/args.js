@@ -1,5 +1,11 @@
+import fs from 'fs'
+import * as path from "node:path";
+
 const parseArgs = () => {
-    // Write your code here 
+
+    const data = fs.readFileSync('env'), 'utf8');
+
+    console.log(`--propName` data)
 };
 
 parseArgs();
