@@ -1,5 +1,14 @@
+import fs from 'fs';
+
 const read = async () => {
-    // Write your code here 
+
+    const readStream = fs.createReadStream('./files/fileToRead.txt');
+
+    readStream.pipe(process.stdout);
+
+    readStream.on('error', (error) => {
+        console.error('Ошибка при чтении файла:', error.message);
+    });
 };
 
 await read();
