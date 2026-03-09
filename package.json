@@ -1,0 +1,13 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "File Manager with Node.js APIs",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node \"$(pwd)/src/index.js\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
