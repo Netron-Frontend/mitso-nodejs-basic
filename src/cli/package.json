@@ -1,0 +1,15 @@
+{
+  "name": "insideout-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for insideOut string transformation",
+  "main": "insideout.js",
+  "bin": {
+    "insideout": "./insideout.js"
+  },
+  "scripts": {
+    "start": "node insideout.js"
+  },
+  "keywords": ["cli", "stream", "transform"],
+  "author": "",
+  "license": "ISC"
+}

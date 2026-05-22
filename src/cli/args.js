@@ -1,14 +1,24 @@
 const parseArgs = () => {
     const args = process.argv.slice(2);
-    const result = [];
+    const options = {
+        input: null,
+        output: null,
+        task: null
+    };
 
-    for (let i = 0; i < args.length; i += 2) {
-        const propName = args[i].replace(/^--/, '');
-        const value = args[i + 1];
-        result.push(`${propName} is ${value}`);
+    for (let i = 0; i < args.length; i++) {
+        const arg = args[i];
+
+        if (arg === '-i' || arg === '--input') {
+            options.input = args[++i];
+        } else if (arg === '-o' || arg === '--output') {
+            options.output = args[++i];
+        } else if (arg === '-t' || arg === '--task') {
+            options.task = args[++i];
+        }
     }
 
-    console.log(result.join(', '));
+    return options;
 };
 
-parseArgs();
+module.exports = { parseArgs };
